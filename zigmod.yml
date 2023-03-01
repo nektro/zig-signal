@@ -2,3 +2,5 @@ id: e8pdn6ebq6rkxgmctmdhhwd6wcvughnz9ndzmpuk
 name: signal
 main: signal.zig
 license: MIT
+dependencies:
+  - src: system_lib c
