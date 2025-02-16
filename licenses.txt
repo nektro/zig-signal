@@ -1,0 +1,6 @@
+MIT:
+= https://spdx.org/licenses/MIT
+- This
+
+Unspecified:
+- system_lib c
