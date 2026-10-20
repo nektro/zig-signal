@@ -4,7 +4,7 @@ const __sighandler_t = ?*const fn (c_int) callconv(.c) void;
 extern fn signal(__sig: c_int, __handler: __sighandler_t) __sighandler_t;
 
 pub fn listenFor(sig: std.os.linux.SIG, comptime f: fn () void) void {
-    _ = signal(@intCast(@intFromEnum(sig)), Handler(f).handle);
+    _ = signal(@intCast(@backingInt(sig)), Handler(f).handle);
 }
 
 fn Handler(comptime f: fn () void) type {
